@@ -47,13 +47,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        auth.inMemoryAuthentication()
 //                .withUser("spring")
 //                .password("{bcrypt}$2a$10$7tYAvVL2/KwcQTcQywHIleKueg4ZK7y7d44hKyngjTwHCDlesxdla")
-//                .roles("ADMIN")
+//                .roles("ROLE_ADMIN")
 //                .and()
 //                .withUser("user")
 //                .password("{sha256}1296cefceb47413d3fb91ac7586a4625c33937b4d3109f5a4dd96c79c46193a029db713b96006ded")
-//                .roles("USER");
+//                .roles("ROLE_USER");
 //
-//        auth.inMemoryAuthentication().withUser("scott").password("{bcrypt}$2a$10$jv7rEbL65k4Q3d/mqG5MLuLDLTlg5oKoq2QOOojfB3e2awo.nlmgu").roles("CUSTOMER");
+//        auth.inMemoryAuthentication().withUser("scott").password("{bcrypt}$2a$10$jv7rEbL65k4Q3d/mqG5MLuLDLTlg5oKoq2QOOojfB3e2awo.nlmgu").roles("ROLE_CUSTOMER");
 //    }
 
 //    @Override
@@ -62,13 +62,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        UserDetails admin = User.withDefaultPasswordEncoder()
 //                .username("spring")
 //                .password("guru")
-//                .roles("ADMIN")
+//                .roles("ROLE_ADMIN")
 //                .build();
 //
 //        UserDetails user = User.withDefaultPasswordEncoder()
 //                .username("user")
 //                .password("password")
-//                .roles("USER")
+//                .roles("ROLE_USER")
 //                .build();
 //
 //        return new InMemoryUserDetailsManager(admin, user);
