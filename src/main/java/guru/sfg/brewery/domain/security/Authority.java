@@ -2,10 +2,7 @@ package guru.sfg.brewery.domain.security;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -17,11 +14,11 @@ import java.util.Set;
 public class Authority {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String role;
 
-    @ManyToMany (mappedBy = "authorities")
+    @ManyToMany(mappedBy = "authorities")
     private Set<User> users;
 }
