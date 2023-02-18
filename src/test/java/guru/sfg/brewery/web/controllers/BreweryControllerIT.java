@@ -39,21 +39,21 @@ public class BreweryControllerIT extends BaseIT {
     @Test
     void getBreweriesJsonCUSTOMER() throws Exception {
         mockMvc.perform(get("/brewery/api/v1/breweries")
-                        .with(httpBasic("scott", "tiger")))
+                .with(httpBasic("scott", "tiger")))
                 .andExpect(status().is2xxSuccessful());
     }
 
     @Test
     void getBreweriesJsonADMIN() throws Exception {
         mockMvc.perform(get("/brewery/api/v1/breweries")
-                        .with(httpBasic("spring", "guru")))
+                .with(httpBasic("spring", "guru")))
                 .andExpect(status().is2xxSuccessful());
     }
 
     @Test
     void getBreweriesJsonUSER() throws Exception {
         mockMvc.perform(get("/brewery/api/v1/breweries")
-                        .with(httpBasic("user", "password")))
+                .with(httpBasic("user", "password")))
                 .andExpect(status().isForbidden());
     }
 
