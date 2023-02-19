@@ -11,10 +11,13 @@ import javax.persistence.*;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
+/**
+ * Created by jt on 6/21/20.
+ */
 @Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 @Entity
 public class User implements UserDetails, CredentialsContainer {

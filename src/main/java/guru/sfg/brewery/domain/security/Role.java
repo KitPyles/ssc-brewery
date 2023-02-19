@@ -4,14 +4,16 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Set;
 
-@Getter
+/**
+ * Created by jt on 6/29/20.
+ */
 @Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity
 public class Role {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

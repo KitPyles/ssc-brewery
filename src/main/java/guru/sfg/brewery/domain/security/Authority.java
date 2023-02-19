@@ -5,10 +5,13 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Set;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
+/**
+ * Created by jt on 6/21/20.
+ */
 @Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 @Entity
 public class Authority {

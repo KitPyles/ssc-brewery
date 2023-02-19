@@ -16,7 +16,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
+
+                http
                 .authorizeRequests(authorize -> {
                     authorize
                             .antMatchers("/h2-console/**").permitAll() //do not use in production!
@@ -28,7 +29,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin().and()
                 .httpBasic()
                 .and().csrf().disable();
-        http.headers().frameOptions().sameOrigin();
+
+                //h2 console config
+                http.headers().frameOptions().sameOrigin();
     }
 
     @Bean
@@ -36,8 +39,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return SfgPasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+   // @Override
+ //   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+       // auth.userDetailsService(this.jpaUserDetailsService).passwordEncoder(passwordEncoder());
 
 //        auth.inMemoryAuthentication()
 //                .withUser("spring")

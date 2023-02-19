@@ -116,7 +116,7 @@ public class DefaultBreweryLoader implements CommandLineRunner {
     }
 
     private BeerOrder createOrder(Customer customer) {
-        return beerOrderRepository.save(BeerOrder.builder()
+        return  beerOrderRepository.save(BeerOrder.builder()
                 .customer(customer)
                 .orderStatus(OrderStatusEnum.NEW)
                 .beerOrderLines(Set.of(BeerOrderLine.builder()
