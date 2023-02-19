@@ -9,6 +9,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * Created by jt on 6/22/20.
+ */
 @Slf4j
 @RequiredArgsConstructor
 @Service

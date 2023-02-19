@@ -1,6 +1,7 @@
 package guru.sfg.brewery.domain.security;
 
 import lombok.*;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -29,4 +30,5 @@ public class Role {
         joinColumns = {@JoinColumn(name = "ROLE_ID", referencedColumnName = "ID")},
         inverseJoinColumns = {@JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID")})
     private Set<Authority> authorities;
+
 }

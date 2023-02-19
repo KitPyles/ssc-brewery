@@ -129,6 +129,7 @@ public class DefaultBreweryLoader implements CommandLineRunner {
                 .build());
     }
 
+
     private void loadTastingRoomData() {
         Customer tastingRoom = Customer.builder()
                 .customerName(TASTING_ROOM)
@@ -265,4 +266,5 @@ public class DefaultBreweryLoader implements CommandLineRunner {
 
         log.debug("Users Loaded: " + userRepository.count());
     }
+
 }

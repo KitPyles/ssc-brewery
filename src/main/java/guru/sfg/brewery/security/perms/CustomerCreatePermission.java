@@ -1,6 +1,5 @@
 package guru.sfg.brewery.security.perms;
 
-// created by kp on 2/18/2023
 
 import org.springframework.security.access.prepost.PreAuthorize;
 
