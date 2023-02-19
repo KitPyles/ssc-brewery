@@ -13,7 +13,7 @@ import java.util.UUID;
 @Component
 public class BeerOrderAuthenticationManager {
 
-    public Boolean CustomerIdMatches(Authentication authentication, UUID customerId){
+    public boolean CustomerIdMatches(Authentication authentication, UUID customerId){
         User authenticatedUser = (User) authentication.getPrincipal();
 
         log.debug("Auth User Customer ID: " + authenticatedUser.getCustomer().getId() + "Customer ID: " + customerId);
