@@ -23,7 +23,8 @@ public class BeerControllerIT extends BaseIT{
     @DisplayName("Init New Form")
     @Nested
     class InitNewForm{
-        @ParameterizedTest(name = "#{index} with {arguments}")
+
+        @ParameterizedTest(name = "#{index} with [{arguments}]")
         @MethodSource("guru.sfg.brewery.web.controllers.BeerControllerIT#getStreamAllUsers")
         void initCreationFormAuth(String user, String pwd) throws Exception {
 
