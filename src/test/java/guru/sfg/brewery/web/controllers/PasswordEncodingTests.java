@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Disabled
 public class PasswordEncodingTests {
+
     static final String PASSWORD = "password";
 
     @Test
